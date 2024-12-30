@@ -1,0 +1,153 @@
+<!doctype html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link href="output.css" rel="stylesheet">
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&family=Rubik:ital,wght@0,300..900;1,300..900&display=swap" rel="stylesheet">
+  <title>Conop AI ChatUI</title>
+</head>
+<body>
+  <main class="flex w-full h-screen" >
+    <!-- sidebar -->
+     <aside id="mySidebar" class="lg:flex gap-4 flex-col w-2/12 bg-slate-200 px-5 relative hidden dark:bg-slate-600">
+        <div class="m-3">
+          <img src="icons/menu.svg" alt="">
+        </div>
+        <div class="flex gap-4 bg-slate-100 rounded-lg p-1 cursor-pointer">
+          <img src="icons/add_24dp_5F6368_FILL0_wght400_GRAD0_opsz24.svg" alt="">
+          <p class="">Nouvelle Discussions</p>
+        </div>
+
+        <!-- Discussions récentes -->
+         <div class="gap-4">
+          <p class="font-black dark:text-white">Discussions récentes</p>
+         </div>
+         <div class="flex gap-4 hover:bg-slate-300 rounded-lg cursor-pointer ">
+          <div>
+            <span><img src="icons/chat_bubble_24dp_5F6368_FILL0_wght400_GRAD0_opsz24.svg" alt=""></span>
+          </div>
+          <div class="max-w-48">
+            <p class="text-sm truncate ">Gemini Font and icons</p>
+          </div>
+         </div>
+         <div class="flex gap-4 hover:bg-slate-300 rounded-lg cursor-pointer ">
+          <div>
+            <span><img src="icons/chat_bubble_24dp_5F6368_FILL0_wght400_GRAD0_opsz24.svg" alt=""></span>
+          </div>
+          <div class="max-w-48">
+            <p class="text-sm truncate ">Module Import Error Troubles</p>
+          </div>
+         </div>
+         <div class="flex gap-4 hover:bg-slate-300 rounded-lg cursor-pointer ">
+          <div>
+            <span><img src="icons/chat_bubble_24dp_5F6368_FILL0_wght400_GRAD0_opsz24.svg" alt=""></span>
+          </div>
+          <div class="max-w-48">
+            <p class="text-sm truncate ">Textarea With Character Limit</p>
+          </div>
+         </div>
+         <div class="flex gap-4 hover:bg-slate-300 rounded-lg cursor-pointer ">
+          <div>
+            <span><img src="icons/chat_bubble_24dp_5F6368_FILL0_wght400_GRAD0_opsz24.svg" alt=""></span>
+          </div>
+          <div class="max-w-48">
+            <p class="text-sm truncate ">Fix JavaScript Style Access</p>
+          </div>
+         </div>
+         <div class="flex gap-4 hover:bg-slate-300 rounded-lg cursor-pointer ">
+          <div>
+            <span><img src="icons/chat_bubble_24dp_5F6368_FILL0_wght400_GRAD0_opsz24.svg" alt=""></span>
+          </div>
+          <div class="max-w-48">
+            <p class="text-sm truncate ">Fix JavaScript Style Access</p>
+          </div>
+         </div>
+         <div class="flex gap-4 hover:bg-slate-300 rounded-lg cursor-pointer ">
+          <div>
+            <span><img src="icons/chat_bubble_24dp_5F6368_FILL0_wght400_GRAD0_opsz24.svg" alt=""></span>
+          </div>
+          <div class="max-w-48 ">
+            <p class="text-sm truncate ">Epochs for Landmark Detection</p>
+          </div>
+         </div>
+         <div class="flex gap-4 hover:bg-slate-300 rounded-lg cursor-pointer items-center ">
+          <div>
+            <span><img src="icons/arrow_drop_down_24dp_5F6368_FILL0_wght400_GRAD0_opsz24.svg" alt=""></span>
+          </div>
+          <div class="max-w-48">
+            <p class="text-xs truncate ">Afficher plus</p>
+          </div>
+         </div>
+
+         <div class="flex flex-col gap-3 absolute bottom-0 pb-5">
+           <div class="flex gap-2 hover:bg-slate-300 rounded-lg cursor-pointer items-center">
+              <img src="icons/heart_check_24dp_5F6368_FILL0_wght400_GRAD0_opsz24.svg" alt="">
+              <p class="text-sm text-stone-500">Gestionnaire de Gems</p>
+           </div>
+           <div class="flex gap-2 hover:bg-slate-300 rounded-lg cursor-pointer items-center">
+              <img src="icons/info_24dp_5F6368_FILL0_wght400_GRAD0_opsz24.svg" alt="">
+              <p class="text-sm text-stone-500">Aide</p>
+           </div>
+           <div class="flex gap-2 hover:bg-slate-300 rounded-lg cursor-pointer items-center">
+              <img src="icons/history_24dp_5F6368_FILL0_wght400_GRAD0_opsz24.svg" alt="">
+              <p class="text-sm text-stone-500">Activité</p>
+            </div>
+            <div class="flex gap-2 hover:bg-slate-300 rounded-lg cursor-pointer items-center">
+              <img src="icons/settings_24dp_5F6368_FILL0_wght400_GRAD0_opsz24.svg" alt="">
+              <p class="text-sm text-stone-500">Parametres</p>
+            </div>
+         </div>         
+     </aside>
+
+     <!-- main content -->
+      <section class=" lg:w-5/6 p-5 relative w-full dark:bg-slate-800  ">
+        <header class="flex justify-between">
+          <div class="">
+            <img onclick="openSidebar()" class="hover:cursor-pointer" src="icons/chat_bubble_24dp_5F6368_FILL0_wght400_GRAD0_opsz24.svg" alt="">
+          </div>
+          <div>
+            <h1>Gemini</h1>
+          </div>
+          <div class="flex gap-2 flex-row">
+            <button class="bg-slate-300 px-2.5 rounded-lg hidden lg:block "> Essayer Gemini Advanced </button>
+            <img class="cursor-pointer hover:bg-slate-100 rounded-full p-1 hidden lg:block" src="icons/apps_24dp_5F6368_FILL0_wght400_GRAD0_opsz24.svg " alt="">
+            <p class="bg-pink-500 rounded-full text-white p-1 cursor-pointer text-center w-[30px]">C</p>
+          </div>
+        </header>
+        <div class="mx-auto lg:w-1/2 w-full h-full relative">
+          <div class="text-5xl font-extrabold ...">
+            <span class="bg-clip-text text-transparent bg-gradient-to-r from-blue-400 via-violet-300 to-pink-400">
+              Bonjour CHRISTIAN
+            </span>
+          </div>
+          <div class="w-full absolute bottom-5 mb-2  ">
+            <div class="flex gap-2 border rounded-full p-5 justify-between  ">
+              <!-- <div class="flex grow"> -->
+                <textarea class="focus:outline-none grow resize-none" type="text" placeholder="Demandez à Gemini" name="" id=""></textarea>
+              <!-- </div> -->
+              <div class="flex gap-2">
+                <div class=" hover:bg-slate-300 hover:rounded-full cursor-pointer">
+                  <img src="icons/mic_24dp_5F6368_FILL0_wght400_GRAD0_opsz24.svg" alt="">
+                </div>
+                <div class=" hover:bg-slate-300 hover:rounded-full cursor-pointer">
+                  <img class="" src="icons/photo_camera_24dp_5F6368_FILL0_wght400_GRAD0_opsz24.svg" alt="">
+                </div>
+              </div>
+            </div>
+          </div> 
+        </div>
+       </div>
+      </section>
+  </main>
+</body>
+<script>
+  function openSidebar() {
+    sideBar = document.getElementById("mySidebar");
+    
+  }
+</script>
+</html>
