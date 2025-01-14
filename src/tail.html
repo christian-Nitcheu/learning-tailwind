@@ -7,8 +7,26 @@
     <script src="https://cdn.tailwindcss.com"></script>
     <link rel="stylesheet" href="output.css">
 </head>
-<body class=" mx-auto bg-gray-900 md:w-full md:mx-0 ">
 
+<body class=" mx-auto bg-gray-900 md:w-full md:mx-0 ">
+    <div class="absolute z-30 w-[328px] h-[100vh] -top-full duration-700 left-3" id="menuList">
+        <div class="text-white text-center bg-slate-700  rounded-lg ">
+            
+            <div class="grid grid-cols-1 divide-y-4">
+                <div class="p-4">
+                    <div class="w-8 h-8 text-white text-center cursor-pointer text-6xl float-right rounded-full hover:bg-slate-600" id="closeMenuList">
+                        &times
+                    </div>
+                </div>
+                <a class="p-4" href="#">Pricing</a>
+                <a class="p-4" href="#">Courses</a>
+                <a class="p-4" href="#">Blog</a>
+                <a class="p-4" href="#">Forum</a>
+            </div>
+        </div>
+    </div>
+
+   <div class="main">
     <header class="relative z-10 p-4 flex justify-between items-center md:px-16">
         <div class="none flex text-white justify-between ">
             <img src="img/logo.svg" alt="logo">
@@ -20,7 +38,7 @@
             </div>
         </div>
         <div class=" text-white justify-between">
-            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 -960 960 960" class="w-8 h-8 fill-slate-400 lg:hidden"><path d="M120-240v-80h720v80H120Zm0-200v-80h720v80H120Zm0-200v-80h720v80H120Z"/></svg>
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 -960 960 960" class="w-8 h-8 fill-slate-400 lg:hidden" id="menu"><path d="M120-240v-80h720v80H120Zm0-200v-80h720v80H120Zm0-200v-80h720v80H120Z"/></svg>
             <div class="hidden lg:flex">
                 <a class="p-4 none" href="#">Login</a>
                 <button class="rounded-full bg-green-800 text-sm p-4">Sign Up</button>
@@ -348,5 +366,7 @@
         </div>
         
       </div>
+   </div>
 </body>
+<script src="tail.js"></script>
 </html>
